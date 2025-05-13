@@ -122,6 +122,16 @@ section ul li{
     border-radius: 7px;
     margin-top: 15px;
 }
+section ul li a{
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    display: block;
+}
 
 section li{
      border-radius: 7px;
