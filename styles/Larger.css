@@ -1,0 +1,26 @@
+/* Styles for larger screens */
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    header {
+        padding: 20px 40px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+    }
+}

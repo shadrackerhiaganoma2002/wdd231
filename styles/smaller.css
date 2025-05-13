@@ -1,0 +1,111 @@
+/* smaller.css */
+
+/* General Reset and Normalize */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Replace with your chosen Google Font */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 1rem;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #0044cc;
+    color: white;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+header span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation Styling */
+nav {
+    margin-top: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #0066ff;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #0044cc;
+}
+
+/* Main Content Styling */
+main {
+    margin-top: 2rem;
+}
+
+main h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  nav ul {
+      flex-direction: column;
+  }
+}
