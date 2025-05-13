@@ -1,5 +1,6 @@
 /* Styles for larger screens */
 @media screen and (min-width: 1024px) {
+}
     body {
         font-size: 18px;
         line-height: 1.6;
@@ -9,9 +10,19 @@
         padding: 20px 40px;
     }
 
+    header img {
+        width: 150px;
+        height: 150px;
+    }
+
     nav ul {
         display: flex;
         justify-content: space-around;
+    }
+
+    nav ul li {
+        flex: 1;
+        text-align: center;
     }
 
     main {
@@ -23,4 +34,7 @@
         text-align: center;
         padding: 20px;
     }
-}
+    footer p {
+        margin: 0;
+    }
+/* Styles for smaller screens */
