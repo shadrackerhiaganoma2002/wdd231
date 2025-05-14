@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shadrack Erhiaganoma Ekavana">
+    <meta name="description" content="Home Page for WDD231 - Web Frontend Development I">
+    <title>WDD 231 - Course Home Page | Shadrack Erhiaganoma Ekavana</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.jpeg" sizes="16x16" type="image/jpeg">
+
+    <link rel="stylesheet" href="styles/normalize.css" media="screen">
+    <link rel="stylesheet" href="styles/smaller.css" media="screen">
+    <link rel="stylesheet" href="styles/larger.css" media="screen">
+
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+
+    <div class="intro-container">
+        <img src="images/myPhoto.jpg" alt="Photo of Shadrack Erhiaganoma Ekavana">
+        <h1>Shadrack Erhiaganoma Ekavana</h1>
+        <span id="menu">☰</span>
+    </div>
+
+    <header>
+        <nav class="nav-links">
+            <a href="#"> <span class="close-menu">✖</span> </a>
+            <a href="index.html">Home</a>
+            <a href="chamber/index.html">Chamber</a>
+            <a href="https://github.com/shadrackerhiaganoma2002">GitHub Profile</a>
+            <a href="https://www.linkedin.com/in/shadrack-ekavana-erhiaganoma">LinkedIn</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <section class="tag-one">
+                <h2>Course Work</h2>
+                <ul>
+                    <li class="course-taken">📌 WDD321 Home Page</li>
+                    <li class="course-taken">📌 Chamber of Commerce</li>
+                    <li class="course-taken">📌 Final Project</li>
+                </ul>
+            </section>
+
+            <section class="tag-two">
+                <h2>Abuja, Nigeria</h2>
+                <img src="images/aso-rock.webp" alt="Aso Rock">
+                <p>Aso Rock</p>
+            </section>
+
+            <section class="tag-three">
+                <h2>Web and Computer Programming Certificate</h2>
+
+                <div class="btn-container">
+                    <button class="all-course">All</button>
+                    <button class="cse-course">CSE</button>
+                    <button class="wdd-course">WDD</button>
+                </div>
+                <hr>
+                <div class="courses-container"></div>
+            </section>
+
+        </div>
+        <span class="total-credit"></span>
+        <dialog id="course-details"></dialog>
+    </main>
+
+    <footer class="footer-nav">
+
+        <span id="currentYear">&copy;</span>
+
+        <div class="flag-name">
+            <p> Shadrack Erhiaganoma Ekavana | Nigeria </p>
+            <img src="images/Nigeria-Flag.jpg" alt="Nigerian Flag" loading="lazy">
+        </div>
+        <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+
+</html>
