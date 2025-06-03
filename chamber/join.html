@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Join Us</title>
+    <meta name="description" content="Apply to join the Chamber of Commerce.">
+    <link rel="stylesheet" href="style/main.css">
+    <script src="script/main.js"></script>
+    </head>
+<body>
+    <header>
+        <h1>Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="dirctory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join Us</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <main class="join-page-content">
+        <h2>Join Our Chamber Today!</h2>
+        <p>Become a member of our vibrant business community and unlock new opportunities.</p>
+
+        <form method="get" action="thankyou.html">
+            <fieldset>
+                <legend>Applicant Information</legend>
+
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" required title="Applicant's First Name" autocomplete="given-name">
+
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required title="Applicant's Last Name" autocomplete="family-name">
+
+                <label for="orgtitle">Organizational Title:</label>
+                <input type="text" id="orgtitle" name="orgtitle" title="Your Title within the Organization (e.g., Manager, Director)" autocomplete="organization-title" pattern="[a-zA-Z\s-]{7,}" placeholder="e.g., Marketing Director">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required title="Your Email Address" autocomplete="email" placeholder="example@example.com">
+
+                <label for="phone">Mobile Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required title="Your Mobile Phone Number" autocomplete="tel">
+            </fieldset>
+
+            <fieldset>
+                <legend>Business Information</legend>
+
+                <label for="orgname">Business/Organization Name:</label>
+                <input type="text" id="orgname" name="orgname" required title="Your Business or Organization's Name" autocomplete="organization">
+
+                <label for="membership">Desired Membership Level:</label>
+                <select id="membership" name="membership" required title="Select your desired membership level">
+                    <option value="">Select a Membership Level</option>
+                    <option value="np">NP Membership (Non-Profit - No Fee)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+
+                <label for="description">Business/Organization Description:</label>
+                <textarea id="description" name="description" title="Provide a brief description of your business or organization" rows="5" placeholder="e.g., We provide custom software solutions for small businesses."></textarea>
+            </fieldset>
+
+            <input type="hidden" id="timestamp" name="timestamp">
+
+            <input type="submit" value="Submit Application">
+        </form>
+
+        <section class="membership-levels-section">
+            <h3>Explore Our Membership Benefits</h3>
+
+            <div class="membership-card" id="np-card">
+                <h4>NP Membership</h4>
+                <p>Designed for non-profit organizations committed to community service.</p>
+                <button type="button" data-modal-target="np-modal">Learn More</button>
+            </div>
+
+            <div class="membership-card" id="bronze-card">
+                <h4>Bronze Membership</h4>
+                <p>A great starting point for small and emerging businesses.</p>
+                <button type="button" data-modal-target="bronze-modal">Learn More</button>
+            </div>
+
+            <div class="membership-card" id="silver-card">
+                <h4>Silver Membership</h4>
+                <p>Enhanced visibility and networking for growing enterprises.</p>
+                <button type="button" data-modal-target="silver-modal">Learn More</button>
+            </div>
+
+            <div class="membership-card" id="gold-card">
+                <h4>Gold Membership</h4>
+                <p>Our premium tier offering maximum exposure and exclusive opportunities.</p>
+                <button type="button" data-modal-target="gold-modal">Learn More</button>
+            </div>
+        </section>
+
+        <dialog id="np-modal">
+            <h3>NP Membership Benefits</h3>
+            <p>Cost: No annual fee</p>
+            <ul>
+                <li>Community networking opportunities</li>
+                <li>Basic listing in the online member directory</li>
+                <li>Access to chamber events at a discounted rate</li>
+                <li>Eligibility for chamber grants (when available)</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="bronze-modal">
+            <h3>Bronze Membership Benefits</h3>
+            <p>Cost: $100/year</p>
+            <ul>
+                <li>All NP benefits</li>
+                <li>Standard listing with logo in the online member directory</li>
+                <li>Discounted rates for workshops and training sessions</li>
+                <li>Opportunity to participate in member-exclusive promotions</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="silver-modal">
+            <h3>Silver Membership Benefits</h3>
+            <p>Cost: $250/year</p>
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>Enhanced directory listing with extended description</li>
+                <li>Priority invitations to special events and luncheons</li>
+                <li>Opportunity for "Member Spotlight" feature on social media</li>
+                <li>Small business advisory services access</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="gold-modal">
+            <h3>Gold Membership Benefits</h3>
+            <p>Cost: $500/year</p>
+            <ul>
+                <li>All Silver benefits</li>
+                <li>Premium placement in the online member directory</li>
+                <li>Exclusive invitations to leadership roundtables and VIP events</li>
+                <li>Dedicated chamber liaison for business support</li>
+                <li>Opportunity for prominent advertising on the chamber website homepage</li>
+                <li>Complimentary attendance at select chamber events</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Chamber of Commerce | All Rights Reserved</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    </body>
+</html>
