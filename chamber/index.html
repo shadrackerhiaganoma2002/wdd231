@@ -1,55 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Chamber of Commerce</title>
-    <link rel="icon" href="image/logo 4.png" type="image/png">
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/smaller.css">
-    <link rel="stylesheet" href="style/larger.css">
-    <script src="main/index.js" defer></script>
+    <meta name="author" content="Shadrack shadrack-Ekavana-Erhiaganoma">
+    <meta name="description" content="Abuja Chamber of Commerce. We have 
+    the vision to build a community where businesses can thrive, foster a community of growth, 
+    and contribute to economic development. A place for businesses to connect together.">
+
+    <meta property="og:title" content="Abuja Chamber of Commerce">
+    <meta property="og:description" content="Abuja Chamber of Commerce connecting businesses together">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shadrackerhiaganoma2002.github.io/wdd231/chamber/index.html">
+    <meta name="twitter:card" content="Abuja Chamber of Commerce connects and grows businesses.">
+    <title>Home | Abuja Chambers of Commerce </title>
+
+    <link rel="stylesheet" href="style/normalize.css" media="screen">
+    <link rel="stylesheet" href="style/index.css" media="screen">
+    <link rel="stylesheet" href="style/dirctory.css" media="screen">
+    <link rel="stylesheet" href="style/dirctory-large.css" media="screen">
+
+    <script src="script/index.js" type="module"></script>
+    <script src="script/lastmodified.js" defer></script>
+    <script src="script/navigation.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <div class="logo">
-            <img src="image/logo 4.png" alt="Chamber Logo">
-            <h1>Shadrack E Erhiaganoma</h1>
-        </div>
-        <nav>
-            <button id="menu-button">&#9776;</button>
-            <ul class="navigation">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
+    <header class="top-banner">
+
+        <nav class="items-left">
+            <ul>
+                <li> <i class="fa-brands fa-facebook"></i> </li>
+                <li> <i class="fa-brands fa-twitter"></i> </li>
+                <li> <i class="fa-brands fa-linkedin"></i> </li>
+                <li> (+234) 817-362-0785 </li>
             </ul>
         </nav>
+
+        <nav class="items-right">
+            <ul>
+                <li> <a href="#">Contact Us</a> </li>
+                <li> <a href="#">Privacy Policy</a> </li>
+            </ul>
+        </nav>
+
     </header>
+
+
+    <header>
+
+        <div class="nav-container">
+            <span>
+                <a href="index.html"> 
+                    <img src="image/logo.webp" alt="Abuja Chambers of Commerce logo">
+                </a>
+
+                <span id="icon-menu"> </span>
+            </span>
+
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
     <main>
-        <section class="hero">
-            <img src="image/logo 4.png" alt="Golden quill pen with a soft glow resting on a curved line suggesting writing or creativity on a clean white background, evoking a sense of elegance and inspiration" class="hero-image">
-            <h1>Welcome to Our Chamber of Commerce</h1>
-            <p>Your gateway to local businesses and community information.</p>
-        </section>
-        <section class="community-info">
-            <h2>Community Highlights</h2>
-            <!-- Add highlights here -->
-        </section>
-        <section class="weather">
-            <h2>Local Weather</h2>
-            <div id="weather-container">
-                <p>Loading weather...</p>
+        <div id="hero-container">
+            <img src="image/hotel-exterior.jpg" alt="home page hero image" loading="lazy">
+            <span tabindex="0">Keynote Ticket</span>
+        </div>
+
+        <h1 class="home">Home</h1>
+
+        <div id="home-container">
+            <!-- Events -->
+            <div class="events">
+                <h3>Events</h3>
+                <p> <strong>Abuja Networking Conference</strong>
+                    <br> <strong>Date:</strong> 20th June 2025
+                    <br> <strong>Time:</strong> 10am - 4pm
+                    <br> <strong>Location:</strong> Abuja Chamber of Commerce Conference Hall
+                    <br> <strong>Venue:</strong> Glass House Opposite Dutse First gate. 
+
+                </p>
             </div>
-        </section>
-        <section class="business-spotlights">
-            <h2>Business Spotlights</h2>
-            <!-- Add spotlights here -->
-        </section>
+
+            <!-- Current Weather -->
+            <div class="cWeather">
+                <h3>Current Weather</h3>
+
+                <div class="weatherInfo-container">
+                    <img id="weather-icon" src="#" alt="weather icon" width="100" height="100">
+
+                    <ul class="weather-info">
+
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- Weather Forecast  -->
+            <div class="wForecast">
+                <h3>Weather Forecast</h3>
+
+                <div class="forecastInfo">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="companies-container">
+
+        </div>
+
     </main>
+
+
     <footer>
-        <p>&copy; <span id="copyright-year"></span> Shadrack .E. Erhiaganoma Chamber of Commerce</p>
-        <p>Last Modified: <span id="last-modified"></span></p>
+        <div class="footer-background">
+
+            <div class="footer-container">
+                <div class="sec-one">
+                    <p>Abuja Chamber of Commerce <br>Glass House Opposite Dutse First gate. 
+                        <br>Abuja, Nigeria</p>
+                       <br>
+                        <a href="image/--">info@abujacc.org</a><br>
+                        (+234) 817-1516-7684
+                    </p>
+                </div>
+
+                <div class="sec-two">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+
+                <div class="sec-three">
+                    <p>WDD231 Web Development 1 Project
+                        <br>Brigham Young University - Idaho
+                        <br>Shadrack Ekavana Erhiaganoma
+                        <br>Last Updated: <span id="lastUpdated"></span>
+                    </p>
+                    <p id="lastModified"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footend-container">
+            <div class="footer-end">
+                <p><span id="currentYear">©</span> Abuja Chamber of Commerce | All rights reserved</p>
+                <p>Designed by Shadrack Ekavana Erhiaganoma</p>
+            </div>
+        </div>
+
     </footer>
 </body>
+
 </html>

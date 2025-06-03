@@ -1,0 +1,115 @@
+@media screen and (min-width:1000px) {
+
+    .nav-container,
+    .intro-msg-container,
+    .list-grid-icons,
+    #comp-grid,
+    #comp-list,
+    .footer-end,
+    .footer-container,
+    .footer-container {
+        margin: 0 auto;
+        max-width: 1200px
+    }
+
+    .items-left,
+    .items-right {
+        display: flex
+    }
+
+    .top-banner {
+        width: 100%;
+        height: 60px;
+        background-color: var(--primary-color);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        justify-content: space-between;
+        padding: 0 20px
+    }
+
+    .items-left ul,
+    .items-right ul {
+        display: flex;
+        gap: 6px
+    }
+
+    .items-right a {
+        color: #fff
+    }
+
+    .nav-container {
+        display: grid;
+        grid: auto/1fr 1fr
+    }
+
+    .nav-container .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        background-color: #fff0
+    }
+
+    #icon-menu {
+        display: none
+    }
+
+    .nav-container .nav-links ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px
+    }
+
+    .nav-container .nav-links a {
+        color: #000;
+        font-weight: 600
+    }
+
+    .nav-container .nav-links a.active {
+        color: var(--primary-color)
+    }
+
+    .nav-container span img {
+        width: 180px;
+        height: auto
+    }
+
+    #comp-grid {
+        display: grid;
+        grid: auto/repeat(3, 1fr);
+        gap: 15px
+    }
+
+    .footer-background {
+        height: 300px
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        line-height: 22px;
+        padding-top: 5%
+    }
+
+    .sec-two {
+        width: 0;
+        height: 0;
+        justify-content: center;
+    }
+
+    .sec-two i {
+        font-size: 44px;
+        padding-right: 8px
+    }
+
+    .footer-end {
+        flex-direction: row;
+        justify-content: space-between
+    }
+
+    .table-list {
+        grid: auto/repeat(4, 1fr)
+    }
+}
