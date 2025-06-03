@@ -56,7 +56,7 @@ a {
 
 .nav-container > span a {
     width: 150px;
-    height: 65px;px;
+    height: 65px;
 }
 
 .nav-container > span img {
@@ -230,9 +230,6 @@ a {
     padding: 10px;
     justify-content: space-evenly;
 }
-
-
-
 
 
 footer {
