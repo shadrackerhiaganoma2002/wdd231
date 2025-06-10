@@ -1,93 +1,91 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // --- Common Functionality ---
+const showDialogue = document.querySelector('#dsDialogue');
+const npMembers = document.querySelector('#NP-M');
+const bMembers = document.querySelector('#Bronze-M');
+const sMembers = document.querySelector('#Silver-M');
+const gMembers = document.querySelector('#Gold-M');
 
-    // Set current year in footer
-    const currentYearSpan = document.getElementById('currentyear');
-    if (currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
-    }
+document.getElementById('timestamp').value = new Date().toISOString();
 
-    // --- Specific to join.html ---
-    // Check if we are on the join.html page
-    if (window.location.pathname.includes('join.html')) {
-        // Timestamp for hidden field
-        const timestampField = document.getElementById('timestamp');
-        if (timestampField) {
-            const now = new Date();
-            // Format as ISO string for machine readability
-            timestampField.value = now.toISOString();
-        }
 
-        // Modal functionality
-        const modalButtons = document.querySelectorAll('.membership-card button[data-modal-target]');
-        const closeButtons = document.querySelectorAll('dialog .close-modal');
+npMembers.addEventListener('click', ()=> {
+    showDialogue.innerHTML = `
+    <span class="closeBtn" autofocus>❌</span>
+    <h2>Non-Profit Membership</h2>
+    
+    <p>Designed for non-profit organizations, this membership offers 
+    access to networking events, community outreach programs, and 
+    discounted rates on chamber services. It's perfect for those 
+    looking to make a positive impact in the Abuja area.</p>
+    `;
+    
+    const closeBtn = document.querySelector('.closeBtn');
+    closeBtn.addEventListener('click', ()=> {
+        showDialogue.close()
+    })
 
-        modalButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const modalId = button.dataset.modalTarget;
-                const modal = document.getElementById(modalId);
-                if (modal) {
-                    modal.showModal(); // Display the dialog as a modal
-                }
-            });
-        });
+    showDialogue.showModal()
+})
 
-        closeButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const dialog = button.closest('dialog'); // Find the parent dialog
-                if (dialog) {
-                    dialog.close(); // Close the dialog
-                }
-            });
-        });
 
-        // Optional: Close modal if clicking outside the dialog content (on the backdrop)
-        // The <dialog> element inherently handles this, but explicit handling can be useful
-        // if you disable default behavior or need custom logic.
-        // For standard <dialog>, this often isn't strictly necessary but doesn't hurt.
-        document.querySelectorAll('dialog').forEach(dialog => {
-            dialog.addEventListener('click', (event) => {
-                if (event.target === dialog) { // Only if the click is directly on the dialog (backdrop)
-                    dialog.close();
-                }
-            });
-        });
-    }
 
-    // --- Specific to thankyou.html ---
-    // Check if we are on the thankyou.html page
-    if (window.location.pathname.includes('thankyou.html')) {
-        const params = new URLSearchParams(window.location.search);
+bMembers.addEventListener('click', ()=> {
+    showDialogue.innerHTML = `
+    <span class="closeBtn" autofocus>❌</span>
+    <h2>Bronze Membership</h2>
+    
+    <p>Ideal for small businesses, the Bronze Membership provides 
+    essential benefits such as listing in the chamber directory, 
+    access to business workshops, and invitations to networking events. 
+    It's a great starting point for businesses looking to 
+    grow their presence.</p>
+    `;
+    
+    const closeBtn = document.querySelector('.closeBtn');
+    closeBtn.addEventListener('click', ()=> {
+        showDialogue.close()
+    })
 
-        // Function to display parameter safely
-        function displayParam(elementId, paramName) {
-            const element = document.getElementById(elementId);
-            if (element) {
-                element.textContent = params.get(paramName) || 'N/A';
-            }
-        }
+    showDialogue.showModal()
+})
 
-        // Display required form fields
-        displayParam('display-fname', 'fname');
-        displayParam('display-lname', 'lname');
-        displayParam('display-email', 'email');
-        displayParam('display-phone', 'phone');
-        displayParam('display-orgname', 'orgname');
+sMembers.addEventListener('click', ()=> {
+    showDialogue.innerHTML = `
+    <span class="closeBtn" autofocus>❌</span>
+    <h2>Silver Membership</h2>
+    
+    <p>The Silver Membership offers enhanced benefits, including 
+    priority listing in the chamber directory, free admission to 
+    select events, and access to exclusive marketing opportunities. 
+    This level is perfect for businesses aiming to expand their 
+    reach and influence.</p>
+    `;
+    
+    const closeBtn = document.querySelector('.closeBtn');
+    closeBtn.addEventListener('click', ()=> {
+        showDialogue.close()
+    })
 
-        // Special handling for timestamp to format it
-        const rawTimestamp = params.get('timestamp');
-        const displayTimestampElement = document.getElementById('display-timestamp');
-        if (displayTimestampElement && rawTimestamp) {
-            try {
-                const dateObj = new Date(rawTimestamp);
-                // Format for user-friendly display (e.g., "June 3, 2025 at 5:01 PM")
-                displayTimestampElement.textContent = dateObj.toLocaleString();
-            } catch (e) {
-                console.error("Error parsing timestamp:", e);
-                displayTimestampElement.textContent = 'Invalid Date';
-            }
-        } else if (displayTimestampElement) {
-            displayTimestampElement.textContent = 'N/A';
-        }
-    }
-});
+    showDialogue.showModal()
+})
+
+
+gMembers.addEventListener('click', ()=> {
+    showDialogue.innerHTML = `
+    <span class="closeBtn" autofocus>❌</span>
+    <h2>Gold Membership</h2>
+    
+    <p>The Gold Membership is the premium option, offering all 
+    the benefits of the Silver Membership plus additional perks 
+    like VIP access to events, personalized business support, 
+    and opportunities for leadership roles within the chamber. 
+    It's ideal for businesses looking to maximize their 
+    impact and visibility.</p>
+    `;
+    
+    const closeBtn = document.querySelector('.closeBtn');
+    closeBtn.addEventListener('click', ()=> {
+        showDialogue.close()
+    })
+
+    showDialogue.showModal()
+})

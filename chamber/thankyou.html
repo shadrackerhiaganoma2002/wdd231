@@ -1,46 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce - Thank You</title>
-    <meta name="description" content="Thank you for your Chamber of Commerce application.">
-    <link rel="stylesheet" href="style/main.css">
-    </head>
+    <meta name="author" content="Christian I. Ahanonu">
+    <meta name="description" content="Abuja Chamber of Commerce. We have 
+    the vision to build a community where businesses can thrive, foster a community of growth, 
+    and contribute to economic development. A place for businesses to connect together.">
+
+    <meta property="og:title" content="Abuja Chamber of Commerce">
+    <meta property="og:description" content="Abuja Chamber of Commerce connecting businesses together">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://christian-ahanonu.github.io/wdd231/chamber/images/homepage-photo.jpeg">
+    <meta property="og:url" content="https://christian-ahanonu.github.io/wdd231/chamber/index.html">
+    <meta name="twitter:card" content="Abuja Chamber of Commerce connects and grows businesses.">
+    <title>Submit Application | Abuja Chambers of Commerce </title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="manifest" href="images/icons/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css" media="screen">
+    <link rel="stylesheet" href="styles/thankyou.css" media="screen">
+    <link rel="stylesheet" href="styles/directory.css" media="screen">
+    <link rel="stylesheet" href="styles/directory-large.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <script src="scripts/thankyou.js" defer></script>
+    <script src="scripts/lastmodified.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
+</head>
+
 <body>
-    <header>
-        <h1>Chamber of Commerce</h1>
-        <nav>
+    <header class="top-banner">
+
+        <nav class="items-left">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join Us</a></li>
-                </ul>
+                <li> <i class="fa-brands fa-facebook"></i> </li>
+                <li> <i class="fa-brands fa-twitter"></i> </li>
+                <li> <i class="fa-brands fa-linkedin"></i> </li>
+                <li> (+234) 817-362-0785 </li>
+            </ul>
         </nav>
+
+        <nav class="items-right">
+            <ul>
+                <li> <a href="#">Contact Us</a> </li>
+                <li> <a href="#">Privacy Policy</a> </li>
+            </ul>
+        </nav>
+
     </header>
 
-    <main class="thankyou-content">
-        <h2>Thank You for Your Application!</h2>
-        <p>Your membership application has been successfully received. We appreciate your interest in joining our Chamber of Commerce and will review your submission shortly.</p>
 
-        <h3>Summary of Your Application:</h3>
-        <div id="submitted-info">
-            <p><strong>First Name:</strong> <span id="display-fname"></span></p>
-            <p><strong>Last Name:</strong> <span id="display-lname"></span></p>
-            <p><strong>Email Address:</strong> <span id="display-email"></span></p>
-            <p><strong>Mobile Phone:</strong> <span id="display-phone"></span></p>
-            <p><strong>Business/Organization Name:</strong> <span id="display-orgname"></span></p>
-            <p><strong>Application Submitted On:</strong> <span id="display-timestamp"></span></p>
+    <header>
+
+        <div class="nav-container">
+            <span>
+                <a href="index.html"> 
+                    <img src="images/acc_logo.svg" alt="Abuja Chambers of Commerce logo">
+                </a>
+
+                <span id="icon-menu"> </span>
+            </span>
+
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dirctory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
         </div>
 
-        <p class="return-link"><a href="index.html">Return to the Home Page</a></p>
+    </header>
+
+
+
+    <main>
+        <div id="displayApp"></div>
+
+
     </main>
 
-    <footer>
-        <p>&copy; <span id="currentyear"></span> Chamber of Commerce | All Rights Reserved</p>
-    </footer>
 
-    <script src="script/main.js"></script>
+
+
+    <footer>
+        <div class="footer-background">
+
+            <div class="footer-container">
+                <div class="sec-one">
+                    <p>Abuja Chamber of Commerce <br>
+                        No 3 Galadima Close, Garki <br>
+                        Abuja <br>
+                        <a href="#">info@abujacc.org</a><br>
+                        (+234) 817-362-0785
+                    </p>
+                </div>
+
+                <div class="sec-two">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+
+                <div class="sec-three">
+                    <p>WDD231 Web Development 1 Project
+                        <br>Brigham Young University - Idaho
+                        <br>Shadrack Erhiaganoma Ekavana
+                    </p>
+                    <p id="lastModified"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footend-container">
+            <div class="footer-end">
+                <p><span id="currentYear">©</span> Abuja Chamber of Commerce | All rights reserved</p>
+                <p>Designed by Shadrack Erhiaganoma Ekavana </p>
+            </div>
+        </div>
+
+    </footer>
 </body>
+
 </html>

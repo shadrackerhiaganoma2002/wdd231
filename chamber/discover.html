@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Shadrack Erhiaganoma Ekavana">
-    <meta name="keywords" content="Abuja, Chamber of Commerce, Business, Directory, Events, Weather, Networking, Community">
+    <meta name="author" content="Christian I. Ahanonu">
     <meta name="description" content="Abuja Chamber of Commerce. We have 
     the vision to build a community where businesses can thrive, foster a community of growth, 
     and contribute to economic development. A place for businesses to connect together.">
@@ -13,10 +12,10 @@
     <meta property="og:title" content="Abuja Chamber of Commerce">
     <meta property="og:description" content="Abuja Chamber of Commerce connecting businesses together">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://shadrackerhiaganoma2002.github.io/wdd231/chamber/images/homepage-photo.jpeg">
-    <meta property="og:url" content="https://shadrackerhiaganoma2002.github.io/wdd231/chamber/index.html">
+    <meta property="og:image" content="https://christian-ahanonu.github.io/wdd231/chamber/images/homepage-photo.jpeg">
+    <meta property="og:url" content="https://christian-ahanonu.github.io/wdd231/chamber/index.html">
     <meta name="twitter:card" content="Abuja Chamber of Commerce connects and grows businesses.">
-    <title>Home | Abuja Chambers of Commerce </title>
+    <title>Discovery | Abuja Chambers of Commerce </title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
@@ -28,17 +27,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style/normalize.css" media="screen">
-    <link rel="stylesheet" href="style/index.css" media="screen">
+    <link rel="stylesheet" href="style/discovery.css" media="screen">
     <link rel="stylesheet" href="style/dirctory.css" media="screen">
     <link rel="stylesheet" href="style/dirctory-large.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     
-    <script src="script/index.js" type="module"></script>
-    <script src="script/lastmodified.js" defer></script>
-    <script src="script/nav.js" defer></script>
+    <script src="scripts/discovery.js" defer></script>
+    <script src="scripts/lastmodified.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
 </head>
 
 <body>
+
+    <header id="greeting-msg"></header>
+
     <header class="top-banner">
 
         <nav class="items-left">
@@ -46,7 +48,7 @@
                 <li> <i class="fa-brands fa-facebook"></i> </li>
                 <li> <i class="fa-brands fa-twitter"></i> </li>
                 <li> <i class="fa-brands fa-linkedin"></i> </li>
-                <li> (+234) 816-315-6109 </li>
+                <li> (+234) 817-362-0785 </li>
             </ul>
         </nav>
 
@@ -73,69 +75,65 @@
 
             <nav class="nav-links">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
-                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
                 </ul>
             </nav>
         </div>
 
     </header>
-
-
+    
     <main>
-        <div id="hero-container">
-            <img src="image/hotel-exterior.jpg" alt="home page hero image" loading="lazy">
-            <span tabindex="0">Keynote Ticket</span>
-        </div>
+        <h1>Discover Fun Places in Abuja</h1>
 
-        <h1 class="home">Home</h1>
+        <div id="discover-container">
 
-        <div id="home-container">
-            <!-- Events -->
-            <div class="events">
-                <h3>Events</h3>
-                <p> <strong>Abuja Networking Conference</strong>
-                    <br> <strong>Date:</strong> 20th June 2025
-                    <br> <strong>Time:</strong> 1200noon - 4:00pm
-                    <br> <strong>Venue:</strong> Abuja International Conference Centre, Abuja.
-
-                </p>
-            </div>
-
-            <!-- Current Weather -->
-            <div class="cWeather">
-                <h3>Current Weather</h3>
-
-                <div class="weatherInfo-container">
-                    <img id="weather-icon" src="#" alt="weather icon" width="100" height="100">
-
-                    <ul class="weather-info">
-
+            <div class="att-1">
+                <div class="Events">
+                    <h1>Special Events</h1>
+                    <ul>
+                        <li>Business Diversity Conference | 20th June 2025, 4pm</li>
+                        <li>Business Excellence Award Event | 7th August 2025, 2pm</li>
+                        <li>Professional Development Seminar | 10th November 2025, 1pm</li>
                     </ul>
 
                 </div>
-            </div>
 
-            <!-- Weather Forecast  -->
-            <div class="wForecast">
-                <h3>Weather Forecast</h3>
+                Calender
+                <div id="calendar-section">
 
-                <div class="forecastInfo">
+                    <div class="calendar-header">
+                        <button id="prev-month">&#9664;</button>
+                        <span id="month-year"></span>
+                        <button id="next-month">&#9654;</button>
+                    </div>
+
+                    <div class="calendar">
+                        Day names
+                        <div class="day-names">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div> 
+                            <div>Sat</div>
+                        </div>
+                        Days will be dynamically populated
+                        <div class="days" id="days"></div>
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
-
-        <div id="companies-container">
 
         </div>
 
+        <div class="tryData"></div>
     </main>
-
 
     <footer>
         <div class="footer-background">
@@ -143,10 +141,10 @@
             <div class="footer-container">
                 <div class="sec-one">
                     <p>Abuja Chamber of Commerce <br>
-                        Glass House Opposite First Gate,Duste Ahalji <br>
+                        No 3 Galadima Close, Garki <br>
                         Abuja <br>
                         <a href="#">info@abujacc.org</a><br>
-                        (+234) 816-315-6109
+                        (+234) 817-362-0785
                     </p>
                 </div>
 
@@ -159,7 +157,7 @@
                 <div class="sec-three">
                     <p>WDD231 Web Development 1 Project
                         <br>Brigham Young University - Idaho
-                        <br>Shadrack Erhiaganoma Ekavana
+                        <br>Shadrack Erhiaganoma Ekavana  
                     </p>
                     <p id="lastModified"></p>
                 </div>

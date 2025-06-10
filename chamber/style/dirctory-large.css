@@ -72,7 +72,11 @@
     }
 
     .nav-container span img {
-        width: 180px;
+        margin: 15px 0;
+        padding: 0;
+        margin-bottom: auto;
+        margin-top: auto;
+        width: 100px;
         height: auto
     }
 

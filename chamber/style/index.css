@@ -1,17 +1,16 @@
 :root {
-    --primary-color: #1143a1;
-    --secondary-color: #FAEDFC;
+    --primary-color: #3377f6;
+    --secondary-color: #3b9cbf;
     --accent-color1: #E6E6E6;
     --accent-color2: #F2F2F2;
     --accent-color3: #F4F4F4;
     
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Outfit, "Humanst521 BT", roboto, sans-serif;
     font-size: 16px;
     scroll-behavior: smooth;
 }
  
 #hero-container {
-    margin-top: auto;
     width: 100%;
     height: 300px;
     position: relative;
@@ -21,13 +20,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
 }
 
 #hero-container span {
     font-size: 1rem;
     font-weight: 600;
-    background-color: rgb(20, 19, 19);
+    background-color: white;
     color: var(--primary-color);
     padding: 8px;
     margin: 10px;
@@ -54,7 +52,7 @@
 }
 
 #home-container .events, .cWeather, .wForecast {
-    background-color: rgb(16, 80, 175);
+    background-color: aqua;
     background-color: var(--secondary-color);
     border-radius: 10px;
     height: 300px;
